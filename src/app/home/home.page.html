@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Plus Grade
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-input type="text" [(ngModel)]="myPNR" placeholder="Type your PNR here*"></ion-input>
+  <ion-input type="text" [(ngModel)]="myLastname" placeholder="Lastname*"></ion-input>
+  <ion-button expand="full" (click)="getPNRStatus()">Get Status</ion-button>
+  <ion-label>
+    {{results}}
+  </ion-label>
 </ion-content>
